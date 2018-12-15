@@ -1,0 +1,7 @@
+{
+  "name": "Warehouse",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
