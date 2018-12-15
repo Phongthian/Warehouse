@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="DeepSkyBlue">
+    <ion-title padding text-center>Table Data Add</ion-title>
+      <ion-buttons right>
+        <button ion-button icon-only>
+          <ion-icon name="more"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class="row" padding text-center>
+      <div class="col">Name</div>
+      <div class="col">Date</div>
+      <div class="col">Expired Date</div>
+      <div class="col">Number of Box</div>
+      <div class="col">Number of Bottles</div>
+      <div class="col">About</div>
+  </div>
+  
+  <div class="row" *ngFor="let datas of firebase" padding text-center>
+    <div class="col">{{datas.text}}</div>
+    <div class="col">{{datas.Date}}</div>
+    <div class="col">{{datas.ExpiredDate}}</div>
+    <div class="col">{{datas.NumberBox}}</div>
+    <div class="col">{{datas.NumberBottls}}</div>
+    <div class="col">
+      <button ion-button (click)="delete(datas.key)" color="danger">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </div>
+  </div>
+  
+  
+
+
+</ion-content>

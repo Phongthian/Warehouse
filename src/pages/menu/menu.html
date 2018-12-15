@@ -1,0 +1,50 @@
+<ion-content class="bg-imgs">
+  <ion-grid>
+    <ion-row>
+      <ion-col padding text-center><br>
+        <!-- <img src="/assets/imgs/management.png" style="width:200px;height:200px;" > -->
+        <h1>Welcome to</h1>
+        <h1>Intelligent Warehouse System</h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col (click)="createCode()" padding text-center>
+        <img src="/assets/imgs/qrcodetwo.png" style="width:150px;height:150px;">
+        <h5>Create QR Code</h5>
+      </ion-col>
+
+      <ion-col (click)="showListdata()" padding text-center>
+        <img src="/assets/imgs/scan.png" style="width:150px;height:150px;">
+        <h5>Scan data add</h5>
+      </ion-col>
+
+      <ion-col (click)="showListOutData()" padding text-center>
+        <img src="/assets/imgs/scan.png" style="width:150px;height:150px;">
+        <h5>Scan data out</h5>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col (click)="showData()" padding text-center>
+        <img src="/assets/imgs/scancode.png" style="width:150px;height:150px;">
+        <h5>Show Data</h5>
+      </ion-col>
+
+      <ion-col (click)="goStatistics()" padding text-center>
+        <img src="/assets/imgs/graph.png" style="width:150px;height:150px;">
+        <h5>Statistics</h5>
+      </ion-col>
+
+      <ion-col (click)="goNotification()" padding text-center>
+        <img src="/assets/imgs/notification.png" style="width:150px;height:150px;">
+        <h5>Notifications</h5>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

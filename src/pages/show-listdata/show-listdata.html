@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar color="DeepSkyBlue">
+    <ion-title padding text-center>Show List Add Data</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="newAddData()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+
+      <button ion-button icon--only (click)="goToTable()">
+        <ion-icon name="grid"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <p>ยอดสินค้าเข้าในคลังสินค้า: {{datas.NumberBox}}</p>
+    </ion-item>
+
+    <ion-item>
+      <p>จำนวน: {{datas.NumberBottls}}</p>
+    </ion-item>
+  </ion-list>
+
+  <!-- // Show Data -->
+  <ion-list>
+    <ion-item-sliding *ngFor="let datas of firebase">
+      <ion-item>
+        <h2>text: {{datas.text}}</h2>
+        <h3>Date: {{datas.Date}}</h3>
+        <h3>Expired Date: {{datas.ExpiredDate}}</h3>
+        <h3>Number of Box: {{datas.NumberBox}}</h3>
+        <h3>Number of Bottles: {{datas.NumberBottls}}</h3>
+      </ion-item>
+      
+       <ion-item-options side="right">
+        <button ion-button icon-only color="danger" (click)="delete(datas.key)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>
+
+

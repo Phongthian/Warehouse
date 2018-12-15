@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar color="DeepSkyBlue">
+    <ion-buttons right>
+      <button ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+    <h1 padding text-center>
+      Please fill in the form out.
+    </h1>
+
+    <form>
+      <button ion-button color="secondary" round (click)="scanQR()">
+        SCAN
+      </button>
+    </form>
+
+<!-- // Data Form -->
+<ion-list padding text-center>
+  <ion-item>
+    {{test}}
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Date Out</ion-label>
+    <ion-input [(ngModel)]="datas.Date"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Number Bottles</ion-label>
+    <ion-input type="number" [(ngModel)]="datas.NumberBottls"></ion-input>
+  </ion-item>
+
+</ion-list>
+  
+<!-- // Button Save to firebase -->
+  <div padding text-center>
+    <button ion-button color="secondary" (click)="saveFirebase(datas)">
+      SAVE
+    </button>
+    
+    <button ion-button color="danger" (click)="closeData()">
+      ยกเลิก
+    </button>
+  </div> 
+
+    
+</ion-content>

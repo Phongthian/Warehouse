@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar color="DeepSkyBlue">
+    <ion-buttons right>
+      <button ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1 padding text-center>Created Code</h1>
+
+  <ion-row>
+    <ion-col padding text-center>
+      <ion-item>
+        <ion-input [(ngModel)]="createdData" type="text" placeholder="Created Code"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <div padding text-center>
+    <button ion-button (click)="created()">
+      Created
+    </button>
+  </div>
+
+  <ion-card *ngIf="createdCode">
+    <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+    <ion-card-content padding text-center>
+      <p>value: {{ createdCode }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
